@@ -22,4 +22,14 @@ public class HomeController {
         model.addAttribute("pedidos", pedidos);
         return "home";
     }
+
+    /*
+    Another way
+    @GetMapping("/home")
+    public ModelAndView home() {
+        List<Pedido> pedidos = repository.findAll();
+        ModelAndView mv = new ModelAndView("home");
+        mv.addObject("pedidos", pedidos);
+        return mv;
+    }*/
 }
