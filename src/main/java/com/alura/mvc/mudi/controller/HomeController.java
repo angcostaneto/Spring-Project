@@ -26,7 +26,7 @@ public class HomeController {
         pedido.setDescricao("uma descrição");
 
         List<Pedido> pedidos = Arrays.asList(pedido);*/
-        Query query = entityManager.createQuery('select p from Pedido p', Pedido.class);
+        Query query = entityManager.createQuery("select p from Pedido p", Pedido.class);
         List<Pedido> pedidos = query.getResultList();
 
         model.addAttribute("pedidos", pedidos);
